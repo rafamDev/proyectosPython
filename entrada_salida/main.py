@@ -3,7 +3,7 @@ def datos():
     nombreProducto = input("Introduce nombre producto: ")
     cantidad = int (input("Introduce cantidad: "))
     precio = float (input("Introduce precio: "))
-    salida(nombreProducto,cantidad,precio)
+    mostrarDatos(nombreProducto,cantidad,precio)
 
 def mostrarDatos(nombreProducto,cantidad,precio):
     print("El nombre del producto es:",nombreProducto)
