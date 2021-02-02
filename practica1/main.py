@@ -2,7 +2,7 @@
 
 
 def pedirNumero():
-    return int (input("Introduce Numero: "))
+    return float (input("Introduce Numero: "))
 
 def calculo():
     try:
@@ -20,12 +20,15 @@ def calculo():
 
 
 def mayorMenor(numeros):
+    mayor = numeros[0]
+    menor = numeros[0]
     for numero in numeros:
-        if (numero < numeros[0]):
-            print("Numero menor: ", numero)
-        if (numero > numeros[0]):
-            print("Numero mayor: ", numero)
-
+        if numero > mayor:
+            mayor = numero
+        if numero < menor:
+            menor = numero
+    print("Numero mayor: ", mayor)
+    print("Numero menor: ", menor)
 
 
 if __name__ == '__main__':
