@@ -1,4 +1,4 @@
-#Algoritmo que pida tres números, obten la media muestralos ordenados (de mayor a menor).
+#Algoritmo que pida tres números, obtenga la media de ellos y los muestre ordenados (de mayor a menor).
 
 
 def pedirNumero():
