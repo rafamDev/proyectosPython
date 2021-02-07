@@ -1,4 +1,7 @@
 
+# El siguiente programa simula ser un cajero que acepta dos tipos de tarjetas, una normal (débito), donde se ingresa y retira capital
+# y otra prenium (crédto) donde introduciendo un porcentaje de incremento se crea un intrés compuesto a cada ingreso.
+
 from cuenta import Cuenta, CuentaPrenium
 
 def ingresar(cuenta,ingreso):
@@ -45,7 +48,7 @@ def subMenu(cuenta):
        if opcion == 1:
            cantidad = float(input("Inserte Cantidad: "))
            ingresar(cuenta, cantidad)
-       elif opcion == 2:
+       if opcion == 2:
            cantidad = float(input("Inserte Cantidad: "))
            retirar(cuenta, cantidad)
        else:
@@ -63,7 +66,7 @@ def subMenuPrenium(cuentaPrenium):
        if opcion == 1:
            cantidad = float(input("Inserte Cantidad: "))
            ingresarPrenium(cuentaPrenium,cantidad)
-       elif opcion == 2:
+       if opcion == 2:
            cantidad = float(input("Inserte Cantidad: "))
            retirarPrenium(cuentaPrenium,cantidad)
        else:
