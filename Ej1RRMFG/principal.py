@@ -18,10 +18,10 @@ def final(croupierPuntos,jugadorPuntos,jugadorIntentos,croupierIntentos):
     if jugadorPuntos > croupierPuntos:
         print("(Jugador) Has Ganado!!")
     if jugadorPuntos < croupierPuntos:
-        print("(Banca) ha ganado!!")
+        print("(Croupier) ha ganado!!")
     if jugadorPuntos == croupierPuntos:
         if jugadorIntentos > croupierIntentos:
-             print("(Banca) ha perdido!!")
+             print("(Croupier) ha perdido!!")
         if jugadorIntentos < croupierIntentos:
             print("(Jugador) Has perdido!!")
 
