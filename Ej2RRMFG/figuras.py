@@ -1,5 +1,6 @@
+from abc import ABC
 
-class FiguraGeometrica():
+class FiguraGeometrica(ABC):
 
     def calcularArea(self):
         pass
@@ -21,16 +22,17 @@ class Rectangulo(FiguraGeometrica):
 
 class Triangulo(FiguraGeometrica):
 
-    def __init__(self,base,altura,lado):
+    def __init__(self,base,altura,ladoA,ladoB):
        self.base = base
        self.altura = altura
-       self.lado = lado
+       self.ladoA = ladoA
+       self.ladoB = ladoB
 
     def calcularArea(self):
       return (self.base * self.altura)/2
 
     def calcularPerimetro(self):
-      return self.base + self.altura + self.lado
+      return self.base + self.ladoA + self.ladoB
 
 class Pentagono(FiguraGeometrica):
 

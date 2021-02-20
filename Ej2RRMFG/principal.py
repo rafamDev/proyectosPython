@@ -1,13 +1,12 @@
 from figuras import Triangulo, Rectangulo, Cuadrado, Pentagono
 
-
 def rectangulo():
     rectangulo = Rectangulo(float(input("Introduzca Base: ")),float(input("Introduzca Altura: ")))
     print("El area es: ",rectangulo.calcularArea())
     print("El perimetro es: ",rectangulo.calcularPerimetro())
 
 def triangulo():
-    triangulo = Triangulo(float(input("Introduzca Lado(1) [Base]: ")),float(input("Introduzca Lado(2) [Altura]: ")),float(input("Introduzca Lado(3): ")))
+    triangulo = Triangulo(float(input("Introduzca Lado(1) [Base]: ")),float(input("Introduzca [Altura]: ")),float(input("Introduzca Lado(2): ")),float(input("Introduzca Lado(3): ")))
     print("El area es: ",triangulo.calcularArea())
     print("El perimetro es: ",triangulo.calcularPerimetro())
 
