@@ -14,26 +14,6 @@ def generarPartida():
             break
     return puntos, intentos
 
-def final(croupierPuntos,jugadorPuntos,jugadorIntentos,croupierIntentos):
-    if jugadorPuntos > croupierPuntos:
-        print("(Jugador) Has Ganado!!")
-    if jugadorPuntos < croupierPuntos:
-        print("(Croupier) ha ganado!!")
-    if jugadorPuntos == croupierPuntos:
-        if jugadorIntentos > croupierIntentos:
-             print("(Croupier) ha perdido!!")
-        if jugadorIntentos < croupierIntentos:
-            print("(Jugador) Has perdido!!")
-
-def subMenu(croupierPuntos,jugadorPuntos,jugadorIntentos,croupierIntentos):
-    print("\n¿Seguir Jugando?")
-    print("1-Si\n2-No\n")
-    opcion = int(input("Introduzca opcion: \n"))
-    if opcion == 1:
-        menu()
-    if opcion == 2:
-        final(croupierPuntos,jugadorPuntos,jugadorIntentos,croupierIntentos)
-
 def estadoPartida(jugadorPuntos,croupierPuntos,jugadorIntentos,croupierIntentos):
     print("Puntuacion del jugador: ", jugadorPuntos)
     if jugadorPuntos > 21:
@@ -41,7 +21,21 @@ def estadoPartida(jugadorPuntos,croupierPuntos,jugadorIntentos,croupierIntentos)
     if jugadorPuntos == 21:
         print("(Croupier) ha perdido!!")
     if jugadorPuntos < 21:
-        subMenu(croupierPuntos,jugadorPuntos,jugadorIntentos,croupierIntentos)
+        print("\n¿Seguir Jugando?")
+        print("1-Si\n2-No\n")
+        opcion = int(input("Introduzca opcion: \n"))
+        if opcion == 1:
+            menu()
+        if opcion == 2:
+            if jugadorPuntos > croupierPuntos:
+                print("(Jugador) Has Ganado!!")
+            if jugadorPuntos < croupierPuntos:
+                print("(Croupier) ha ganado!!")
+            if jugadorPuntos == croupierPuntos:
+                if jugadorIntentos > croupierIntentos:
+                    print("(Croupier) ha perdido!!")
+                if jugadorIntentos < croupierIntentos:
+                    print("(Jugador) Has perdido!!")
 
 def dificultad(dificil):
    jugadorPuntos,jugadorIntentos = generarPartida()
